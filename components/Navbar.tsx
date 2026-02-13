@@ -56,9 +56,6 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                 {item.label}
               </button>
             ))}
-            <button className="font-medium text-slate-600 hover:text-primary transition-colors">
-              Membership
-            </button>
           </div>
 
           {/* Desktop Actions */}
@@ -71,7 +68,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             <button className="hidden sm:block font-semibold px-4 py-2 text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">
               Login
             </button>
-            <button className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/20">
+            <button 
+              onClick={() => onNavigate(Page.MEMBERSHIP)}
+              className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/20"
+            >
               Join the Club
             </button>
           </div>
@@ -108,14 +108,17 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                 {item.label}
               </button>
             ))}
-            <button className="block w-full text-left px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-primary">
-              Membership
-            </button>
             <div className="pt-4 flex flex-col gap-3">
               <button className="w-full text-center font-semibold px-4 py-2 text-slate-600 border border-slate-200 rounded-lg">
                 Login
               </button>
-              <button className="w-full bg-primary text-white px-6 py-3 rounded-lg font-bold shadow-md">
+              <button 
+                onClick={() => {
+                  onNavigate(Page.MEMBERSHIP);
+                  setIsOpen(false);
+                }}
+                className="w-full bg-primary text-white px-6 py-3 rounded-lg font-bold shadow-md"
+              >
                 Join the Club
               </button>
             </div>
