@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import TournamentsPage from './pages/TournamentsPage';
 import ClinicsPage from './pages/ClinicsPage';
+import AboutPage from './pages/AboutPage';
+import MembershipPage from './pages/MembershipPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>(Page.HOME);
@@ -13,10 +15,14 @@ function App() {
     switch (currentPage) {
       case Page.HOME:
         return <HomePage onNavigate={setCurrentPage} />;
+      case Page.ABOUT:
+        return <AboutPage onNavigate={setCurrentPage} />;
       case Page.TOURNAMENTS:
         return <TournamentsPage />;
       case Page.CLINICS:
         return <ClinicsPage />;
+      case Page.MEMBERSHIP:
+        return <MembershipPage />;
       default:
         return <HomePage onNavigate={setCurrentPage} />;
     }
