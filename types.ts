@@ -2,7 +2,8 @@ export enum Page {
   HOME = 'HOME',
   TOURNAMENTS = 'TOURNAMENTS',
   CLINICS = 'CLINICS',
-  MEMBERSHIP = 'MEMBERSHIP'
+  MEMBERSHIP = 'MEMBERSHIP',
+  ABOUT = 'ABOUT'
 }
 
 export interface NavItem {
