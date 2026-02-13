@@ -93,8 +93,8 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Card 1 */}
-          <div className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-transparent hover:border-primary/20 transition-all hover:-translate-y-2 cursor-pointer" onClick={() => onNavigate(Page.TOURNAMENTS)}>
+          {/* Card 1: Tournament */}
+          <div className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-transparent hover:border-primary/20 transition-all hover:-translate-y-2 cursor-pointer" onClick={() => onNavigate(Page.TOURNAMENT_DETAILS)}>
             <div className="relative h-56 overflow-hidden">
               <img 
                 src={IMAGES.EVENT_1} 
@@ -125,7 +125,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Card 2 */}
+          {/* Card 2: Clinic */}
           <div className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-transparent hover:border-primary/20 transition-all hover:-translate-y-2 cursor-pointer" onClick={() => onNavigate(Page.CLINICS)}>
             <div className="relative h-56 overflow-hidden">
               <img 
@@ -156,8 +156,8 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Card 3 */}
-          <div className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-transparent hover:border-primary/20 transition-all hover:-translate-y-2 cursor-pointer">
+          {/* Card 3: Social Event */}
+          <div className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-transparent hover:border-primary/20 transition-all hover:-translate-y-2 cursor-pointer" onClick={() => onNavigate(Page.EVENT_DETAILS)}>
             <div className="relative h-56 overflow-hidden">
               <img 
                 src={IMAGES.EVENT_3} 
@@ -198,7 +198,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             Members get unlimited court access, discounts on tournaments, and priority registration for all coaching clinics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary px-10 py-4 rounded-xl font-extrabold text-lg hover:bg-slate-50 transition-colors shadow-xl">
+            <button onClick={() => onNavigate(Page.MEMBERSHIP)} className="bg-white text-primary px-10 py-4 rounded-xl font-extrabold text-lg hover:bg-slate-50 transition-colors shadow-xl">
               See Membership Plans
             </button>
             <button className="bg-primary-dark/20 border-2 border-white/30 text-white px-10 py-4 rounded-xl font-extrabold text-lg hover:bg-white/10 transition-colors">
