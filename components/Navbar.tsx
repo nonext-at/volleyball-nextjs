@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Search, VolleyBall } from 'lucide-react';
+import { Menu, X, Search, Volleyball } from 'lucide-react';
 import { Page } from '../types';
 import { NAV_ITEMS } from '../constants';
 
