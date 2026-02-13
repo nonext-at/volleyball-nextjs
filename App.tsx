@@ -7,6 +7,8 @@ import TournamentsPage from './pages/TournamentsPage';
 import ClinicsPage from './pages/ClinicsPage';
 import AboutPage from './pages/AboutPage';
 import MembershipPage from './pages/MembershipPage';
+import EventDetailsPage from './pages/EventDetailsPage';
+import TournamentDetailsPage from './pages/TournamentDetailsPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>(Page.HOME);
@@ -23,6 +25,10 @@ function App() {
         return <ClinicsPage />;
       case Page.MEMBERSHIP:
         return <MembershipPage />;
+      case Page.EVENT_DETAILS:
+        return <EventDetailsPage />;
+      case Page.TOURNAMENT_DETAILS:
+        return <TournamentDetailsPage />;
       default:
         return <HomePage onNavigate={setCurrentPage} />;
     }
