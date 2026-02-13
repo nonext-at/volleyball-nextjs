@@ -54,10 +54,10 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div>
           <h4 className="text-white font-bold mb-6 uppercase text-sm tracking-widest">Navigation</h4>
           <ul className="space-y-4">
+            <li><button onClick={() => onNavigate(Page.ABOUT)} className="hover:text-primary transition-colors">About Us</button></li>
             <li><button onClick={() => onNavigate(Page.CLINICS)} className="hover:text-primary transition-colors">Clinics & Training</button></li>
             <li><button onClick={() => onNavigate(Page.TOURNAMENTS)} className="hover:text-primary transition-colors">Tournament Brackets</button></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Private Coaching</a></li>
-            <li><a href="#" className="hover:text-primary transition-colors">Membership Perks</a></li>
+            <li><button onClick={() => onNavigate(Page.MEMBERSHIP)} className="hover:text-primary transition-colors">Membership Perks</button></li>
             <li><a href="#" className="hover:text-primary transition-colors">Court Rentals</a></li>
           </ul>
         </div>
